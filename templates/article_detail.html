@@ -1,0 +1,39 @@
+<!-- {% extends 'base.html' %} -->
+{% load crispy_forms_tags %}
+
+{% load static %}
+{% block content %}
+  <div class="article-entry">
+    <h2>{{ object.title }}</h2>
+      <p>by {{ object.author }} | {{ object.date }}</p>
+      <p>{{ object.body }}</p>
+  </div>
+
+
+  <div class="comments_item">
+  <p><a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+  <p>Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
+
+
+<form method="POST" class="form">{% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-primary" type="submit">Опубликовать</button>      
+
+</form>
+
+
+
+{% for comment in comments %}
+
+  <br>
+  <strong>{{comment.author}}:                   {{comment.created}}</strong>
+  <br>
+  
+  {{comment.comment}}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <br>
+  <br>
+  </div>
+{% endfor %}
+{% endblock content %}

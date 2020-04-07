@@ -1,0 +1,57 @@
+
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 150px;
+}
+
+
+
+.page {
+    background: rgb(58, 56, 56);
+  }
+
+.navbar-expend {
+    background-color: rgb(216, 18, 18);
+    border-color: rgb(32, 17, 236);
+}
+
+.article-entry {
+    color: #fff;
+}
+
+
+.comments_item{
+    color: #fff;
+}
+
+.search-results{
+    color: #fff;
+}
+
+.password-change {
+    color: #fff;
+}
+
+.login {
+    color:#fff;
+}
+
+.signup {
+    color:#fff;
+}
+
+.footer-content {
+    border-top: 1px solid rgb(43, 46, 44);
+    height: 115px;
+}
+
+.developers {
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Lacquer', sans-serif;
+}
